@@ -1,3 +1,5 @@
+const heroRefinement=document.createElement('link');heroRefinement.rel='stylesheet';heroRefinement.href='hero-v3.css?v=1';document.head.appendChild(heroRefinement);
+
 const loader=document.getElementById('loader');
 window.addEventListener('load',()=>setTimeout(()=>loader?.classList.add('done'),1900));
 setTimeout(()=>loader?.classList.add('done'),3200);
