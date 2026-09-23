@@ -1,5 +1,9 @@
 const heroRefinement=document.createElement('link');heroRefinement.rel='stylesheet';heroRefinement.href='hero-v3.css?v=1';document.head.appendChild(heroRefinement);
 
+// Ensure the brand mark is always unmistakably BR: B white, R green.
+const brandMark=`<g aria-label="BR"><text x="18" y="68" fill="#ffffff" font-family="Space Grotesk,Arial,sans-serif" font-size="68" font-weight="700" letter-spacing="-8">B</text><text x="78" y="68" fill="#10cf95" font-family="Space Grotesk,Arial,sans-serif" font-size="68" font-weight="700" letter-spacing="-8">R</text><path d="M18 80h132M44 76c23-25 52-25 76 0M56 73V54M70 73V43M84 73V36M98 73V43M112 73V54" fill="none" stroke="#10cf95" stroke-width="2.6" stroke-linecap="round" opacity=".95"/></g>`;
+document.querySelectorAll('.br-symbol').forEach(svg=>{svg.setAttribute('viewBox','0 0 170 95');svg.innerHTML=brandMark;});
+
 const loader=document.getElementById('loader');
 window.addEventListener('load',()=>setTimeout(()=>loader?.classList.add('done'),1900));
 setTimeout(()=>loader?.classList.add('done'),3200);
