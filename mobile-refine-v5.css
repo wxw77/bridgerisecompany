@@ -1,0 +1,52 @@
+/* Bridge Rise — mobile readability + vertical balance refinements only. Desktop untouched. */
+@media (max-width:1000px){
+  .panel,.panel.is-active,.panel.is-before,.panel.is-after{padding-top:74px!important;padding-bottom:48px!important}
+  .panel-inner{min-height:calc(100dvh - 122px)!important;gap:14px!important}
+  .section-head>span,.eyebrow{font-size:8px!important;letter-spacing:.24em!important}
+  .section-head h2,.contact h2{font-size:clamp(34px,8.8vw,50px)!important;line-height:.95!important;margin-top:8px!important}
+  .hero h1{font-size:clamp(34px,9.4vw,50px)!important;line-height:.94!important}
+  .hero-copy>p,.results-grid .section-head p,.contact-grid>div:first-child>p{font-size:12.5px!important;line-height:1.5!important}
+  .primary-btn,.ghost-btn{font-size:8.5px!important;min-height:40px!important}
+
+  /* Use more of the viewport so slides feel complete, not bottom-heavy. */
+  .hero .panel-inner,.difference .panel-inner,.services .panel-inner,.results .panel-inner,.testimonials .panel-inner,.contact .panel-inner{justify-content:space-between!important}
+  .hero .panel-inner{grid-template-rows:minmax(180px,34vh) auto!important}
+  .hero-system{min-height:180px!important;max-height:285px!important}
+
+  .manifesto .panel-inner{justify-content:space-between!important;padding-top:8px!important}
+  .manifesto-screen{height:225px!important}.manifesto-screen article{padding:17px!important}
+  .manifesto-screen h3{font-size:clamp(21px,5.6vw,30px)!important}.manifesto-screen p{font-size:11.5px!important;line-height:1.48!important}
+  .manifesto-tabs button{font-size:9px!important}.manifesto-tabs button b{font-size:11px!important}
+  .metrics article{min-height:100px!important;padding:12px!important}.metrics h3{font-size:10.5px!important}.metrics p{font-size:9.5px!important;line-height:1.35!important}
+
+  .compare-wrap{align-self:stretch!important}.compare-side{min-height:285px!important;padding:16px!important}.compare-side h3{font-size:clamp(19px,5vw,25px)!important}.compare-side ul{font-size:10.5px!important;line-height:1.5!important}.compare-side small{font-size:7px!important}
+
+  .service-viewport{height:285px!important}.service-track article{padding:18px!important}.service-track h3{font-size:clamp(24px,6.4vw,34px)!important}.service-track p{font-size:11.5px!important;line-height:1.48!important}.service-console aside button{font-size:8.5px!important}.service-console aside button b{font-size:11px!important}
+
+  .numbers{align-self:stretch!important}.numbers article{min-height:110px!important;padding:14px!important}.numbers b{font-size:38px!important}.numbers p{font-size:9.5px!important;line-height:1.35!important}
+
+  .testimonial-view{height:min(420px,56vh)!important;min-height:330px!important;align-self:stretch!important}.testimonial-track p{font-size:clamp(24px,6.4vw,33px)!important;line-height:1.12!important}.testimonial-track b{font-size:8.5px!important}.testimonial-track small{font-size:8.5px!important}
+
+  .contact-terminal{align-self:stretch!important}.contact-terminal>a{padding:15px!important}.contact-terminal small{font-size:8.5px!important}.contact-terminal b{font-size:12px!important}.contact footer{margin-top:10px!important}
+}
+
+@media (max-width:560px){
+  .panel,.panel.is-active,.panel.is-before,.panel.is-after{padding-top:72px!important;padding-bottom:46px!important}
+  .panel-inner{min-height:calc(100dvh - 118px)!important}
+  .section-head h2,.contact h2{font-size:clamp(32px,9.2vw,44px)!important}
+  .hero h1{font-size:clamp(32px,9.8vw,45px)!important}
+  .hero-copy>p,.results-grid .section-head p,.contact-grid>div:first-child>p{font-size:12.25px!important}
+  .manifesto-screen{height:215px!important}.manifesto-screen p{font-size:11.25px!important}
+  .metrics article{min-height:96px!important}.metrics p{font-size:9.25px!important}
+  .compare-side{min-height:260px!important}.compare-side h3{font-size:18px!important}.compare-side ul{font-size:9.8px!important}
+  .service-viewport{height:270px!important}.service-track p{font-size:11.25px!important}
+  .numbers article{min-height:104px!important}
+  .testimonial-view{min-height:315px!important}.testimonial-track p{font-size:25px!important}
+}
+
+@media (max-width:380px){
+  .section-head h2,.contact h2{font-size:30px!important}.hero h1{font-size:30px!important}
+  .hero-copy>p,.results-grid .section-head p,.contact-grid>div:first-child>p{font-size:11.75px!important}
+  .manifesto-screen h3{font-size:20px!important}.manifesto-screen p{font-size:10.75px!important}
+  .compare-side ul{font-size:9.2px!important}.service-track p{font-size:10.8px!important}.testimonial-track p{font-size:23px!important}
+}
