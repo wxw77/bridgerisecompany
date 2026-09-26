@@ -1,7 +1,7 @@
-/* Bridge Rise — compact information architecture v3. Preserves fullscreen slide navigation and menu behavior. */
+/* Bridge Rise — compact information architecture v4. Desktop kept intact; mobile reorganized for clearer fullscreen storytelling. */
 :root{--compact-gap:18px;--compact-pad:clamp(18px,3vw,34px)}
 
-/* DESKTOP / NOTEBOOK */
+/* DESKTOP / NOTEBOOK — unchanged */
 @media (min-width:1001px){
   .panel{padding:94px 5.4vw 46px!important}
   .panel-inner{width:min(1360px,100%)!important;min-height:calc(100vh - 140px)!important;height:auto!important;gap:18px!important;justify-content:center!important}
@@ -10,7 +10,6 @@
   .section-head h2,.contact h2{font-size:clamp(36px,4vw,64px)!important;line-height:.93!important;margin-top:10px!important}
   .section-head.compact h2{font-size:clamp(34px,3.8vw,58px)!important}
   .panel-footer{bottom:12px!important;left:5.4vw!important;right:5.4vw!important}
-
   .hero .panel-inner{grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr)!important;gap:34px!important}
   .hero h1{font-size:clamp(48px,5.25vw,84px)!important;line-height:.91!important;margin-top:14px!important}
   .hero-copy>p{font-size:13.5px!important;line-height:1.62!important;margin:18px 0!important;max-width:560px!important}
@@ -18,32 +17,25 @@
   .hero-system{height:min(430px,50vh)!important}.system-core{width:220px!important;height:220px!important}.br-badge.xl{font-size:72px!important}
   .o1{width:370px!important;height:118px!important}.o2{width:305px!important;height:305px!important}.o3{width:255px!important;height:78px!important}
   .system-node{font-size:7px!important;padding:8px 10px!important}
-
   .manifesto .panel-inner,.difference .panel-inner,.services .panel-inner,.testimonials .panel-inner{justify-content:center!important;padding-top:0!important;gap:16px!important}
   .manifesto-stage{height:220px!important;grid-template-columns:190px 1fr!important;margin-top:0!important}
   .manifesto-tabs button{padding:12px 14px!important}.manifesto-tabs button b{font-size:14px!important}
   .manifesto-screen article{padding:24px 30px!important}.manifesto-screen h3{font-size:clamp(24px,2.5vw,38px)!important;margin:10px 0!important}.manifesto-screen p{font-size:12.5px!important;line-height:1.55!important}
   .metrics{grid-template-columns:repeat(4,1fr)!important;margin-top:0!important;flex:0 0 auto!important}
   .metrics article{min-height:112px!important;padding:14px 16px!important}.metrics b{font-size:21px!important}.metrics h3{font-size:12.5px!important;margin:8px 0 4px!important}.metrics p{font-size:10px!important;line-height:1.35!important}
-
   .compare-wrap{margin-top:0!important;grid-template-columns:1fr 54px 1fr!important;min-height:0!important}
   .compare-side{min-height:300px!important;padding:24px 28px!important}.compare-side h3{font-size:clamp(23px,2.1vw,32px)!important;margin:12px 0!important}.compare-side ul{font-size:12.5px!important;line-height:1.55!important}
   .compare-mid i{height:68px!important}
-
   .service-console{height:390px!important;grid-template-columns:250px 1fr!important;margin-top:0!important}
   .service-console aside button{padding:14px 16px!important}.service-console aside button b{font-size:14px!important}
   .service-track article{padding:28px 34px!important}.service-track h3{font-size:clamp(30px,3.5vw,48px)!important;margin:10px 0!important}.service-track p{font-size:12.5px!important;line-height:1.58!important}.service-diagram{margin-top:22px!important}.service-diagram span{padding:10px 12px!important;font-size:8px!important}
-
   .results .panel-inner{grid-template-columns:minmax(0,.92fr) minmax(430px,1.08fr)!important;gap:46px!important}
   .results-grid .section-head p{font-size:12.5px!important;line-height:1.6!important;max-width:520px!important;margin:16px 0!important}
   .numbers{height:390px!important}.numbers article{padding:20px!important;min-height:0!important}.numbers b{font-size:clamp(44px,4vw,60px)!important}.numbers p{font-size:10.5px!important;line-height:1.45!important;margin-top:7px!important}
-
   .testimonial-view{height:360px!important;margin-top:0!important}.testimonial-track article{padding:30px 40px!important}.testimonial-track p{font-size:clamp(24px,2.5vw,36px)!important;line-height:1.1!important;margin:18px 0!important}.testimonial-controls{right:16px!important;bottom:16px!important}
-
   .contact .panel-inner{grid-template-columns:minmax(0,1fr) minmax(390px,.9fr)!important;gap:48px!important}.contact-grid>div:first-child>p{font-size:12.5px!important;line-height:1.6!important;margin:16px 0!important}.contact-terminal>a{padding:16px 18px!important;grid-template-columns:82px 1fr 18px!important}.contact-terminal b{font-size:12.5px!important}.terminal-top{height:38px!important}
 }
 
-/* SHORT LAPTOPS */
 @media (min-width:1001px) and (max-height:760px){
   .panel{padding-top:82px!important;padding-bottom:38px!important}
   .panel-inner{min-height:calc(100vh - 120px)!important;gap:12px!important}
@@ -53,37 +45,71 @@
   .compare-side{min-height:250px!important}.service-console{height:325px!important}.numbers{height:325px!important}.testimonial-view{height:300px!important}
 }
 
-/* TABLET + MOBILE: same slide mechanism, denser layout, less vertical overflow. */
+/* MOBILE / TABLET — same page switching, rebuilt composition so each screen feels complete. */
 @media (max-width:1000px){
-  .panel,.panel.is-active,.panel.is-before,.panel.is-after{padding:82px 14px 54px!important}
-  .panel-inner{min-height:calc(100dvh - 136px)!important;gap:14px!important}
-  .site-header{height:58px!important;top:8px!important;left:8px!important;right:8px!important;padding:0 10px!important}.br-badge{font-size:29px!important}.menu-toggle{width:40px!important;height:40px!important}
-  .site-header nav.open{inset:74px 8px 8px!important;padding:22px!important;gap:18px!important}.site-header nav.open button{font-size:11px!important}
-  .section-rail{right:3px!important;transform:translateY(-50%) scale(.66)!important}.nav-arrows{left:8px!important;bottom:8px!important}.nav-arrows button{width:40px!important;height:40px!important}
-  .section-head>span,.eyebrow{font-size:7px!important;letter-spacing:.25em!important}.section-head h2,.contact h2{font-size:clamp(32px,8.5vw,48px)!important;line-height:.94!important;margin-top:8px!important}
+  :root{--m-edge:14px;--m-card:rgba(5,17,13,.74)}
+  .panel,.panel.is-active,.panel.is-before,.panel.is-after{padding:76px var(--m-edge) 58px!important}
+  .panel-inner{min-height:calc(100dvh - 134px)!important;height:auto!important;gap:12px!important;justify-content:center!important}
+  .panel.is-active{scroll-padding-top:76px}
+  .panel:after{content:attr(data-title) "  ·  0" attr(data-index) "/06";position:absolute;top:69px;right:14px;z-index:6;font-size:6px;letter-spacing:.18em;color:rgba(170,199,186,.48);pointer-events:none}
 
-  .hero-grid{display:grid!important;grid-template-columns:1fr!important;gap:10px!important}.hero-system{order:-1!important;height:190px!important}.system-core{width:140px!important;height:140px!important}.br-badge.xl{font-size:48px!important}.system-core small{font-size:6px!important;margin-top:10px!important}.o1{width:220px!important;height:70px!important}.o2{width:180px!important;height:180px!important}.o3{width:160px!important;height:50px!important}.system-node{font-size:6px!important;padding:6px 8px!important}
-  .hero h1{font-size:clamp(34px,9.4vw,52px)!important;line-height:.93!important;margin-top:7px!important}.hero-copy>p{font-size:12px!important;line-height:1.52!important;margin:12px 0!important}.hero-actions{gap:6px!important}.primary-btn,.ghost-btn{min-height:40px!important;font-size:8px!important;padding:0 12px!important}
+  .site-header{height:56px!important;top:8px!important;left:8px!important;right:8px!important;padding:0 10px!important;border-color:rgba(255,255,255,.1)!important;background:rgba(2,9,7,.84)!important}
+  .br-badge{font-size:28px!important}.menu-toggle{width:38px!important;height:38px!important}
+  .site-header nav.open{inset:72px 8px 8px!important;padding:18px!important;gap:10px!important;background:rgba(2,8,6,.985)!important}
+  .site-header nav.open button{width:100%;padding:14px 12px!important;border:1px solid rgba(255,255,255,.07)!important;text-align:left!important;font-size:10px!important;background:rgba(255,255,255,.02)!important}
 
-  .manifesto-stage{display:grid!important;grid-template-columns:1fr!important;height:auto!important;margin-top:0!important}.manifesto-tabs{display:grid!important;grid-template-columns:repeat(3,1fr)!important}.manifesto-tabs button{min-height:52px!important;padding:8px!important;grid-template-columns:24px 1fr!important;font-size:9px!important}.manifesto-tabs button b{font-size:11px!important}.manifesto-screen{height:220px!important}.manifesto-screen article{padding:18px!important}.manifesto-screen h3{font-size:clamp(21px,5.8vw,30px)!important;margin:8px 0!important}.manifesto-screen p{font-size:11px!important;line-height:1.5!important}
-  .metrics{grid-template-columns:1fr 1fr!important;margin-top:10px!important}.metrics article{min-height:94px!important;padding:12px!important}.metrics b{font-size:18px!important}.metrics h3{font-size:11px!important;margin:7px 0 3px!important}.metrics p{font-size:9.5px!important;line-height:1.35!important}
+  .section-rail{right:4px!important;transform:translateY(-50%) scale(.62)!important;opacity:.72}
+  .nav-arrows{left:8px!important;bottom:8px!important;gap:6px!important}.nav-arrows button{width:38px!important;height:38px!important;background:rgba(3,12,9,.88)!important;backdrop-filter:blur(10px)}
+  .section-head{max-width:92%!important}.section-head>span,.eyebrow{font-size:6.5px!important;letter-spacing:.23em!important}.section-head h2,.contact h2{font-size:clamp(30px,8vw,44px)!important;line-height:.96!important;margin-top:7px!important}
 
-  .compare-wrap{margin-top:10px!important;grid-template-columns:1fr 1fr!important;gap:1px!important;background:var(--line)!important}.compare-mid{display:none!important}.compare-side{min-height:0!important;padding:16px!important;background:#06110d!important}.compare-side.good{background:linear-gradient(145deg,rgba(40,240,173,.09),#06110d)!important}.compare-side h3{font-size:clamp(19px,5vw,26px)!important;margin:9px 0!important}.compare-side ul{font-size:10.5px!important;line-height:1.5!important;margin:0!important}.compare-side li{margin-bottom:4px!important}.compare-side small{font-size:7px!important}
+  /* Hero fills the viewport in two balanced zones instead of leaving dead space. */
+  .hero .panel-inner{display:grid!important;grid-template-columns:1fr!important;grid-template-rows:minmax(150px,31vh) auto!important;align-content:center!important;gap:8px!important}
+  .hero-system{order:-1!important;height:auto!important;min-height:150px!important;max-height:260px!important}.system-core{width:132px!important;height:132px!important}.br-badge.xl{font-size:46px!important}.system-core small{font-size:5.5px!important;margin-top:8px!important}.o1{width:205px!important;height:66px!important}.o2{width:170px!important;height:170px!important}.o3{width:150px!important;height:48px!important}.system-node{font-size:5.5px!important;padding:5px 7px!important}
+  .hero h1{font-size:clamp(31px,8.7vw,46px)!important;line-height:.94!important;margin-top:6px!important}.hero-copy>p{font-size:11.5px!important;line-height:1.46!important;margin:10px 0 12px!important;max-width:94%!important}.hero-actions{display:grid!important;grid-template-columns:1fr 112px!important;gap:6px!important}.primary-btn,.ghost-btn{min-height:38px!important;font-size:7.5px!important;padding:0 10px!important}
 
-  .service-console{display:grid!important;grid-template-columns:1fr!important;height:auto!important;margin-top:8px!important}.service-console aside{display:grid!important;grid-template-columns:repeat(3,1fr)!important}.service-console aside button{min-height:54px!important;padding:8px!important;grid-template-columns:22px 1fr!important;font-size:9px!important}.service-console aside button b{font-size:11px!important}.service-console aside button i{display:none!important}.service-viewport{height:260px!important}.service-track article{padding:18px!important}.service-track h3{font-size:clamp(23px,6.4vw,34px)!important;margin:8px 0!important}.service-track p{font-size:11px!important;line-height:1.5!important}.service-diagram{margin-top:18px!important;gap:7px!important}.service-diagram span{padding:8px 9px!important;font-size:7px!important}.service-diagram i{width:24px!important}
+  /* Manifesto: tabs + content + 2x2 metrics form one visual system. */
+  .manifesto .panel-inner{justify-content:flex-start!important;padding-top:12px!important}
+  .manifesto-stage{display:grid!important;grid-template-columns:1fr!important;height:auto!important;margin-top:0!important;border-radius:2px!important;overflow:hidden!important;background:var(--m-card)!important}
+  .manifesto-tabs{display:grid!important;grid-template-columns:repeat(3,1fr)!important}.manifesto-tabs button{min-height:46px!important;padding:7px 6px!important;grid-template-columns:20px 1fr!important;font-size:8px!important}.manifesto-tabs button b{font-size:10px!important}
+  .manifesto-screen{height:205px!important}.manifesto-screen article{padding:15px!important}.manifesto-screen h3{font-size:clamp(19px,5.2vw,27px)!important;margin:7px 0!important;line-height:1.02!important}.manifesto-screen p{font-size:10.5px!important;line-height:1.42!important;margin:0!important}
+  .metrics{grid-template-columns:1fr 1fr!important;margin-top:0!important;gap:1px!important;background:var(--line)!important;border:1px solid var(--line)!important}.metrics article{min-height:82px!important;padding:10px!important;background:#06110d!important}.metrics b{font-size:16px!important}.metrics h3{font-size:9.5px!important;margin:5px 0 2px!important}.metrics p{font-size:8.5px!important;line-height:1.28!important;margin:0!important}
 
-  .results-grid{display:grid!important;grid-template-columns:1fr!important;gap:14px!important}.results-grid .section-head p{font-size:11px!important;line-height:1.5!important;margin:12px 0!important}.text-link{font-size:8px!important;padding:10px 0!important}.numbers{grid-template-columns:1fr 1fr!important;margin-top:0!important}.numbers article{min-height:100px!important;padding:14px!important}.numbers b{font-size:38px!important}.numbers span{font-size:10px!important}.numbers p{font-size:9.5px!important;line-height:1.35!important;margin:6px 0 0!important}
+  /* Difference: keep BOTH sides visible; compact contrast card. */
+  .difference .panel-inner{justify-content:center!important}.difference .section-head{max-width:90%!important}
+  .compare-wrap{margin-top:4px!important;grid-template-columns:1fr 1fr!important;gap:1px!important;background:var(--line)!important;border:1px solid var(--line)!important;min-height:0!important}.compare-mid{display:none!important}.compare-side{min-height:265px!important;padding:14px!important;background:#06110d!important;display:flex!important;flex-direction:column!important;justify-content:center!important}.compare-side.bad{opacity:.72!important}.compare-side.good{background:linear-gradient(155deg,rgba(40,240,173,.1),#06110d 55%)!important}.compare-side h3{font-size:clamp(17px,4.6vw,23px)!important;margin:7px 0 9px!important;line-height:1.02!important}.compare-side ul{font-size:9.5px!important;line-height:1.42!important;margin:0!important}.compare-side li{margin:0 0 4px!important}.compare-side small{font-size:6.5px!important;letter-spacing:.16em!important}
 
-  .testimonial-view{height:300px!important;margin-top:8px!important}.testimonial-track article{padding:20px!important}.testimonial-track p{font-size:clamp(21px,5.8vw,30px)!important;line-height:1.12!important;margin:14px 0!important}.testimonial-track b{font-size:8px!important}.testimonial-controls{right:10px!important;bottom:10px!important}.testimonial-controls button{width:38px!important;height:38px!important}
+  /* Services: compact tab rail + one strong content panel. */
+  .services .panel-inner{justify-content:center!important}.service-console{display:grid!important;grid-template-columns:1fr!important;height:auto!important;margin-top:2px!important;border-radius:2px!important;overflow:hidden!important;background:var(--m-card)!important}
+  .service-console aside{display:grid!important;grid-template-columns:repeat(3,1fr)!important}.service-console aside button{min-height:46px!important;padding:7px!important;grid-template-columns:18px 1fr!important;font-size:7.5px!important}.service-console aside button b{font-size:10px!important}.service-console aside button i{display:none!important}
+  .service-viewport{height:265px!important}.service-track article{padding:16px!important;justify-content:center!important}.service-track h3{font-size:clamp(22px,6vw,31px)!important;margin:7px 0!important;line-height:.98!important}.service-track p{font-size:10.5px!important;line-height:1.44!important;margin:0!important;max-width:95%!important}.service-diagram{margin-top:15px!important;gap:6px!important}.service-diagram span{padding:7px 8px!important;font-size:6.5px!important}.service-diagram i{width:22px!important}
 
-  .contact-grid{display:grid!important;grid-template-columns:1fr!important;gap:14px!important}.contact-grid>div:first-child>p{font-size:11px!important;line-height:1.5!important;margin:12px 0!important}.contact-terminal{margin-top:0!important}.contact-terminal>a{padding:13px!important;grid-template-columns:72px 1fr 18px!important}.contact-terminal small{font-size:8px!important}.contact-terminal b{font-size:11px!important}.terminal-top{height:36px!important}.contact footer{margin-top:18px!important;font-size:7px!important}
+  /* Results: copy and 2x2 data wall fill the screen evenly. */
+  .results .panel-inner{justify-content:center!important}.results-grid{display:grid!important;grid-template-columns:1fr!important;gap:10px!important}.results-grid .section-head p{font-size:10.5px!important;line-height:1.42!important;margin:9px 0!important;max-width:95%!important}.text-link{font-size:7.5px!important;padding:8px 0!important;margin:0!important}.numbers{grid-template-columns:1fr 1fr!important;margin-top:0!important;gap:1px!important;background:var(--line)!important;border:1px solid var(--line)!important}.numbers article{min-height:94px!important;padding:12px!important;background:#06110d!important;align-content:center!important}.numbers b{font-size:34px!important}.numbers span{font-size:9px!important}.numbers p{font-size:8.5px!important;line-height:1.28!important;margin:4px 0 0!important}
 
-  .panel-scroll-hint{font-size:6.5px!important;padding:6px 8px!important;margin-top:10px!important;max-width:72vw!important}
+  /* Testimonials: larger quote area so the slide does not look empty. */
+  .testimonials .panel-inner{justify-content:center!important}.testimonial-view{height:min(390px,53vh)!important;min-height:310px!important;margin-top:4px!important;background:var(--m-card)!important}.testimonial-track article{padding:22px 18px 52px!important;justify-content:center!important}.testimonial-track p{font-size:clamp(22px,6vw,31px)!important;line-height:1.1!important;margin:13px 0!important}.testimonial-track b{font-size:7.5px!important}.testimonial-track small{font-size:8px!important}.testimonial-controls{right:10px!important;bottom:10px!important}.testimonial-controls button{width:36px!important;height:36px!important}
+
+  /* Contact: split into concise pitch + terminal, no giant empty gap. */
+  .contact .panel-inner{justify-content:center!important}.contact-grid{display:grid!important;grid-template-columns:1fr!important;gap:10px!important}.contact-grid>div:first-child>p{font-size:10.5px!important;line-height:1.42!important;margin:9px 0 10px!important;max-width:96%!important}.contact-grid .primary-btn{width:100%!important}.contact-terminal{margin-top:0!important;background:var(--m-card)!important}.contact-terminal>a{padding:11px 12px!important;grid-template-columns:66px 1fr 16px!important;gap:8px!important}.contact-terminal small{font-size:7px!important}.contact-terminal b{font-size:10px!important;word-break:break-word!important}.terminal-top{height:32px!important}.terminal-top span{font-size:6.5px!important}.contact footer{margin-top:10px!important;font-size:6.5px!important;letter-spacing:.14em!important}
+
+  .panel-scroll-hint{font-size:6px!important;padding:5px 7px!important;margin-top:7px!important;max-width:70vw!important}
 }
 
 @media (max-width:560px){
-  .panel,.panel.is-active,.panel.is-before,.panel.is-after{padding-left:12px!important;padding-right:12px!important}
-  .compare-wrap{grid-template-columns:1fr!important}.compare-side{padding:14px!important}.compare-side.bad{display:none!important}
-  .metrics{grid-template-columns:1fr 1fr!important}.manifesto-screen{height:205px!important}.service-viewport{height:245px!important}.testimonial-view{height:280px!important}
-  .contact-terminal>a{grid-template-columns:1fr auto!important;gap:6px!important}.contact-terminal small{grid-column:1/-1!important}
+  :root{--m-edge:11px}
+  .panel,.panel.is-active,.panel.is-before,.panel.is-after{padding-top:72px!important;padding-bottom:54px!important}
+  .panel-inner{min-height:calc(100dvh - 126px)!important;gap:10px!important}
+  .panel:after{top:66px;right:11px}
+  .section-head h2,.contact h2{font-size:clamp(28px,8.4vw,39px)!important}.hero h1{font-size:clamp(29px,8.8vw,42px)!important}
+  .hero .panel-inner{grid-template-rows:minmax(138px,29vh) auto!important}.hero-system{min-height:138px!important}.hero-actions{grid-template-columns:1fr 96px!important}
+  .manifesto-screen{height:195px!important}.metrics article{min-height:78px!important}
+  .compare-wrap{grid-template-columns:1fr 1fr!important}.compare-side{min-height:250px!important;padding:12px 10px!important}.compare-side h3{font-size:16px!important}.compare-side ul{font-size:8.8px!important}
+  .service-viewport{height:250px!important}.testimonial-view{min-height:300px!important;height:48vh!important}
+  .contact-terminal>a{grid-template-columns:58px 1fr 14px!important;padding:10px!important}
+}
+
+@media (max-width:390px){
+  .section-rail{display:none!important}
+  .compare-side{padding:10px 8px!important}.compare-side h3{font-size:15px!important}.compare-side ul{font-size:8.2px!important;line-height:1.35!important}
+  .manifesto-screen{height:188px!important}.service-viewport{height:240px!important}.testimonial-view{min-height:285px!important}
 }
