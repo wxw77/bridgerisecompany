@@ -1,5 +1,5 @@
 /* Hero Growth Engine v8 — replaces only the large hero logo with a bridge/growth animation */
-.hero-system .system-core,.hero-system .system-node{display:none!important}
+.hero-system>.bridge-3d,.hero-system .system-core,.hero-system .system-node{display:none!important}
 .hero-growth{position:absolute;inset:5% 2% 4%;z-index:6;display:grid;place-items:center;perspective:1200px;pointer-events:none}
 .hero-growth-shell{position:relative;width:min(660px,96%);height:min(500px,92%);transform-style:preserve-3d;filter:drop-shadow(0 28px 65px rgba(0,0,0,.35))}
 .hero-growth-glow{position:absolute;inset:16% 10%;background:radial-gradient(circle at 50% 50%,rgba(22,223,163,.16),rgba(22,223,163,.05) 36%,transparent 70%);filter:blur(14px);animation:hgGlow 3.6s ease-in-out infinite}
