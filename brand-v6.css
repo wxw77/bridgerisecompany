@@ -1,0 +1,27 @@
+/* Brand v6 — authentic Bridge Rise identity + bridge-based 3D motion */
+:root{--brg:#16dfa3;--brg2:#7fffd6;--gold:#b79a62}
+.brand,.loader-brand{position:relative!important}
+.brand .br-badge,.brand>div:last-child,.loader-brand .br-badge,.loader-brand>div:last-child{display:none!important}
+.brand::before,.loader-brand::before{content:"";display:block;background:url('bridge-rise-logo-v6.svg') center/contain no-repeat}
+.brand::before{width:210px;height:50px}
+.loader-brand::before{width:min(680px,84vw);height:160px}
+.system-core .br-badge{display:none!important}
+.system-core::after{content:"";position:absolute;inset:16%;background:url('bridge-rise-mark-v6.svg') center/contain no-repeat;z-index:5;filter:drop-shadow(0 0 22px rgba(22,223,163,.15))}
+.system-orbit{display:none!important}.loader-ring{display:none!important}
+.hero-system{overflow:hidden!important;transform-style:preserve-3d!important;perspective:1000px!important}
+.bridge-3d,.loader-bridge-3d{position:absolute;inset:0;overflow:hidden;pointer-events:none;transform-style:preserve-3d}
+.bridge-plane{position:absolute;left:50%;top:27%;width:92%;height:90%;transform:translateX(-50%) rotateX(62deg);transform-origin:50% 0;clip-path:polygon(47% 0,53% 0,94% 100%,6% 100%);background:linear-gradient(90deg,rgba(22,223,163,.28),transparent 12%,transparent 88%,rgba(22,223,163,.28)),repeating-linear-gradient(90deg,transparent 0 19.4%,rgba(127,255,214,.17) 19.4% 19.8%,transparent 19.8% 20%);opacity:.9;filter:drop-shadow(0 0 20px rgba(22,223,163,.14))}
+.bridge-plane::after{content:"";position:absolute;left:49.7%;top:0;width:.6%;height:100%;background:linear-gradient(rgba(127,255,214,.45),rgba(127,255,214,.03))}
+.bridge-side{position:absolute;top:28%;bottom:-6%;width:2px;background:linear-gradient(rgba(127,255,214,.12),rgba(127,255,214,.78));filter:drop-shadow(0 0 8px rgba(127,255,214,.28))}
+.bridge-side.left{left:29%;transform:skewX(24deg)}.bridge-side.right{right:29%;transform:skewX(-24deg)}
+.bridge-tower{position:absolute;top:22%;width:8px;height:46%;background:linear-gradient(#16dfa3,#f6f7f7);clip-path:polygon(38% 0,62% 0,100% 100%,0 100%);opacity:.75;filter:drop-shadow(0 0 10px rgba(22,223,163,.24))}
+.bridge-tower.left{left:41%}.bridge-tower.right{right:41%}
+.bridge-frame{position:absolute;left:50%;top:25%;width:28%;height:18%;border:1px solid rgba(127,255,214,.74);border-bottom:0;border-radius:50% 50% 0 0/100% 100% 0 0;transform:translateX(-50%) scale(.18);opacity:0;animation:bridgeMove 5.4s linear infinite;filter:drop-shadow(0 0 8px rgba(127,255,214,.2))}
+.bridge-frame.f2{animation-delay:.55s}.bridge-frame.f3{animation-delay:1.1s}.bridge-frame.f4{animation-delay:1.65s}.bridge-frame.f5{animation-delay:2.2s}.bridge-frame.f6{animation-delay:2.75s}.bridge-frame.f7{animation-delay:3.3s}
+@keyframes bridgeMove{0%{transform:translateX(-50%) translateY(-8%) scale(.18);opacity:0}14%{opacity:.3}36%{opacity:.92}100%{transform:translateX(-50%) translateY(255%) scale(3.5);opacity:0}}
+.system-core{z-index:5!important;background:radial-gradient(circle at 50% 40%,rgba(8,30,22,.8),rgba(2,10,7,.72) 62%,rgba(2,10,7,.2))!important;border:1px solid rgba(127,255,214,.12)!important;box-shadow:inset 0 0 70px rgba(22,223,163,.04),0 20px 70px rgba(0,0,0,.35)!important}
+.system-core small{position:absolute;bottom:12%;z-index:6;color:#d8ddd9!important;letter-spacing:.3em!important}
+.loader-bridge-3d{inset:4% 5% 14%}.loader-bridge-3d .bridge-plane{top:20%;height:96%}.loader-bridge-3d .bridge-side{top:21%}.loader-bridge-3d .bridge-tower{top:16%}.loader-bridge-3d .bridge-frame{top:19%;width:34%}.loader-grid{opacity:.14!important}
+@media(max-width:1000px){.brand::before{width:150px;height:40px}.loader-brand::before{width:min(520px,88vw);height:125px}.system-core::after{inset:15%}.bridge-plane{width:110%;top:24%}.bridge-tower.left{left:38%}.bridge-tower.right{right:38%}.bridge-frame{width:38%}}
+@media(max-width:560px){.brand::before{width:128px;height:34px}.loader-brand::before{width:92vw;height:105px}.bridge-frame{width:46%}.bridge-side.left{left:24%}.bridge-side.right{right:24%}.bridge-tower.left{left:35%}.bridge-tower.right{right:35%}}
+@media(prefers-reduced-motion:reduce){.bridge-frame{animation:none!important;opacity:.28!important;transform:translateX(-50%) scale(1.1)!important}}
