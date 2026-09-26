@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(services&&!services.querySelector('.mobile-extra-services')){
     const block=document.createElement('div');
     block.className='mobile-extra mobile-extra-services';
-    block.innerHTML=`<div class="mobile-extra-label">UM SISTEMA. NÃO SERVIÇOS SOLTOS.</div>
+    block.innerHTML=`<div class="mobile-extra-label">SISTEMAS VALIDADOS</div>
       <div class="mobile-system-map">
         <div class="ms-node"><span>ADS</span><small>gera demanda</small></div>
         <i></i>
