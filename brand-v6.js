@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded',()=>{
-  const bridgeMarkup=`<div class="bridge-plane"></div><span class="bridge-side left"></span><span class="bridge-side right"></span><span class="bridge-tower left"></span><span class="bridge-tower right"></span><span class="bridge-frame f1"></span><span class="bridge-frame f2"></span><span class="bridge-frame f3"></span><span class="bridge-frame f4"></span><span class="bridge-frame f5"></span><span class="bridge-frame f6"></span><span class="bridge-frame f7"></span>`;
+  document.querySelectorAll('.bridge-3d,.loader-bridge-3d').forEach(el=>el.remove());
+  const markup=`<div class="bridge-shadow"></div><div class="bridge-under"></div><div class="bridge-deck"></div><div class="bridge-pylon"></div><span class="bridge-stay l s1"></span><span class="bridge-stay l s2"></span><span class="bridge-stay l s3"></span><span class="bridge-stay l s4"></span><span class="bridge-stay r s1"></span><span class="bridge-stay r s2"></span><span class="bridge-stay r s3"></span><span class="bridge-stay r s4"></span><div class="bridge-light"></div>`;
   const hero=document.querySelector('.hero-system');
-  if(hero&&!hero.querySelector('.bridge-3d')){const el=document.createElement('div');el.className='bridge-3d';el.innerHTML=bridgeMarkup;hero.prepend(el)}
+  if(hero&&!hero.querySelector('.bridge-signature')){const el=document.createElement('div');el.className='bridge-signature';el.innerHTML=markup;hero.prepend(el)}
   const loader=document.getElementById('loader');
-  if(loader&&!loader.querySelector('.loader-bridge-3d')){const el=document.createElement('div');el.className='loader-bridge-3d';el.innerHTML=bridgeMarkup;loader.prepend(el)}
+  if(loader&&!loader.querySelector('.loader-bridge-signature')){const el=document.createElement('div');el.className='loader-bridge-signature';el.innerHTML=markup;loader.prepend(el)}
 });
