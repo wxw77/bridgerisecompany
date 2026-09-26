@@ -1,0 +1,33 @@
+/* Hero Growth Engine v8 — replaces only the large hero logo with a bridge/growth animation */
+.hero-system .system-core,.hero-system .system-node{display:none!important}
+.hero-growth{position:absolute;inset:5% 2% 4%;z-index:6;display:grid;place-items:center;perspective:1200px;pointer-events:none}
+.hero-growth-shell{position:relative;width:min(660px,96%);height:min(500px,92%);transform-style:preserve-3d;filter:drop-shadow(0 28px 65px rgba(0,0,0,.35))}
+.hero-growth-glow{position:absolute;inset:16% 10%;background:radial-gradient(circle at 50% 50%,rgba(22,223,163,.16),rgba(22,223,163,.05) 36%,transparent 70%);filter:blur(14px);animation:hgGlow 3.6s ease-in-out infinite}
+.hg-bridge{position:absolute;left:50%;top:52%;width:72%;height:42%;transform:translate(-50%,-50%) rotateX(62deg);transform-origin:center center;transform-style:preserve-3d}
+.hg-deck{position:absolute;left:8%;right:8%;bottom:24%;height:5px;background:linear-gradient(90deg,rgba(255,255,255,.2),#f4f6f5 22%,#18e2a6 50%,#f4f6f5 78%,rgba(255,255,255,.2));box-shadow:0 0 18px rgba(127,255,214,.25)}
+.hg-deck:before,.hg-deck:after{content:"";position:absolute;bottom:-28px;width:2px;height:62px;background:linear-gradient(#18e2a6,rgba(255,255,255,.1))}
+.hg-deck:before{left:10%}.hg-deck:after{right:10%}
+.hg-tower{position:absolute;left:50%;bottom:24%;width:10px;height:58%;transform:translateX(-50%);background:linear-gradient(#18e2a6,#0aa879);clip-path:polygon(36% 0,64% 0,100% 100%,0 100%);box-shadow:0 0 22px rgba(24,226,166,.35)}
+.hg-cable{position:absolute;bottom:28%;height:2px;background:linear-gradient(90deg,#f4f6f5,rgba(244,246,245,.18));transform-origin:right center;opacity:.88}
+.hg-cable.c1{left:15%;width:36%;transform:rotate(24deg)}.hg-cable.c2{left:25%;width:26%;transform:rotate(14deg)}
+.hg-cable.c3{right:15%;width:36%;transform-origin:left center;transform:rotate(-24deg)}.hg-cable.c4{right:25%;width:26%;transform-origin:left center;transform:rotate(-14deg)}
+.hg-arch{position:absolute;left:6%;right:6%;bottom:25%;height:66%;border-bottom:4px solid rgba(244,246,245,.92);border-radius:0 0 50% 50%/0 0 70% 70%;opacity:.9}
+.hg-flowline{position:absolute;height:1px;background:linear-gradient(90deg,transparent,rgba(127,255,214,.62),transparent);overflow:visible}
+.hg-flowline:after{content:"";position:absolute;top:-3px;left:0;width:7px;height:7px;border-radius:50%;background:#9dffe1;box-shadow:0 0 12px rgba(127,255,214,.9);animation:hgDot 2.7s linear infinite}
+.hg-flowline.l1{left:8%;top:35%;width:37%;transform:rotate(11deg);transform-origin:left center}.hg-flowline.l1:after{animation-delay:.1s}
+.hg-flowline.l2{left:55%;top:35%;width:37%;transform:rotate(-11deg);transform-origin:left center}.hg-flowline.l2:after{animation-delay:.8s}
+.hg-flowline.l3{left:55%;top:61%;width:34%;transform:rotate(12deg);transform-origin:left center}.hg-flowline.l3:after{animation-delay:1.35s}
+.hg-node{position:absolute;min-width:128px;padding:11px 14px;border:1px solid rgba(127,255,214,.2);background:rgba(3,14,10,.84);backdrop-filter:blur(10px);font:700 9px/1.2 'Space Grotesk',sans-serif;letter-spacing:.18em;color:#eefbf7;text-align:center;box-shadow:0 12px 28px rgba(0,0,0,.28)}
+.hg-node small{display:block;margin-top:6px;font:500 7px/1.2 Inter,sans-serif;letter-spacing:.12em;color:#6d8f84}
+.hg-node.ads{left:0;top:22%}.hg-node.clients{right:0;top:22%}.hg-node.sales{right:2%;bottom:9%}
+.hg-node:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#18e2a6;margin-right:7px;box-shadow:0 0 10px rgba(24,226,166,.8)}
+.hg-br{position:absolute;left:50%;top:47%;transform:translate(-50%,-50%);width:118px;height:118px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,rgba(21,57,45,.96),rgba(2,12,8,.94));border:1px solid rgba(127,255,214,.25);box-shadow:0 0 0 10px rgba(22,223,163,.03),0 0 46px rgba(22,223,163,.18);z-index:9;animation:hgCore 3.2s ease-in-out infinite}
+.hg-br img{width:76%;height:76%;object-fit:contain;filter:drop-shadow(0 8px 18px rgba(0,0,0,.32))}
+.hg-br:after{content:"BRIDGE RISE";position:absolute;bottom:-24px;font:700 7px 'Space Grotesk',sans-serif;letter-spacing:.28em;color:#a7c9bd;white-space:nowrap}
+.hg-kicker{position:absolute;left:50%;bottom:2%;transform:translateX(-50%);font:600 7px 'Space Grotesk',sans-serif;letter-spacing:.28em;color:#648579;white-space:nowrap}
+@keyframes hgDot{0%{left:0;opacity:0}10%{opacity:1}90%{opacity:1}100%{left:100%;opacity:0}}
+@keyframes hgGlow{50%{opacity:.58;transform:scale(1.06)}}
+@keyframes hgCore{50%{box-shadow:0 0 0 16px rgba(22,223,163,.025),0 0 62px rgba(22,223,163,.24);transform:translate(-50%,-50%) scale(1.025)}}
+@media(max-width:1000px){.hero-growth{inset:0}.hero-growth-shell{width:96%;height:100%}.hg-node{min-width:98px;padding:8px 9px;font-size:7px}.hg-node small{font-size:6px}.hg-br{width:88px;height:88px}.hg-bridge{width:78%;height:46%}.hg-kicker{font-size:6px}.hg-node.sales{bottom:5%}}
+@media(max-width:560px){.hero-growth-shell{width:100%;height:100%}.hg-node{min-width:82px;padding:7px 7px;font-size:6.3px;letter-spacing:.12em}.hg-node small{display:none}.hg-node.ads{left:1%;top:16%}.hg-node.clients{right:1%;top:16%}.hg-node.sales{right:4%;bottom:4%}.hg-br{width:72px;height:72px}.hg-br:after{font-size:5.7px;bottom:-18px}.hg-bridge{top:55%;width:88%;height:46%}.hg-flowline.l1{left:14%;top:31%;width:31%}.hg-flowline.l2{left:55%;top:31%;width:31%}.hg-flowline.l3{left:57%;top:62%;width:29%}.hg-kicker{bottom:0;font-size:5.5px;letter-spacing:.2em}}
+@media(prefers-reduced-motion:reduce){.hg-flowline:after,.hg-br,.hero-growth-glow{animation:none!important}}
