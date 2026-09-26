@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(difference&&!difference.querySelector('.mobile-extra-difference')){
     const block=document.createElement('div');
     block.className='mobile-extra mobile-extra-difference';
-    block.innerHTML=`<div class="mobile-extra-label">DA ATENÇÃO AO CONTRATO</div>
+    block.innerHTML=`<div class="mobile-extra-label">FOCALIDADE EM VENDAS</div>
       <div class="mobile-extra-flow">
         <div class="mobile-extra-step"><span>01</span><b>ATRAIR</b><small>tráfego com intenção real</small></div>
         <i></i>
